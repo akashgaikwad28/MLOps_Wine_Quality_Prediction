@@ -101,4 +101,5 @@ def load_bin(path: Path) -> Any:
     """
     data = joblib.load(path)
     logger.info(f"binary file loaded from: {path}")
+
     return data
