@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 from box import ConfigBox
 
-from src.Wine_Quality_Prediction.utils.common import (
+from Wine_Quality_Prediction.utils.common import (
     read_yaml,
     create_directories,
     save_json,
