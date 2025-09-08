@@ -29,4 +29,6 @@ jobs:
           pip install pytest
 
       - name: Run unit tests
-        run: pytest tests/ -v
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+          pytest tests/ -v
