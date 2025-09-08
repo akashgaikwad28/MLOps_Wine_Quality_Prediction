@@ -30,5 +30,4 @@ jobs:
 
       - name: Run unit tests
         run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
-          pytest tests/ -v
+          PYTHONPATH=. pytest tests/ -v
