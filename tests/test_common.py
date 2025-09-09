@@ -34,6 +34,7 @@ def test_read_yaml_empty_file(tmp_path):
     empty_yaml = tmp_path / "empty.yaml"
     empty_yaml.write_text("")
 
+    # Match exactly the error message your function raises
     with pytest.raises(ValueError, match="yaml file is empty"):
         read_yaml(empty_yaml)
 
@@ -42,6 +43,7 @@ def test_read_yaml_invalid_file(tmp_path):
     bad_yaml = tmp_path / "bad.yaml"
     bad_yaml.write_text("name: wine: invalid")
 
+    # Expecting generic exception for invalid YAML
     with pytest.raises(Exception):
         read_yaml(bad_yaml)
 
@@ -111,3 +113,4 @@ def test_save_and_load_bin_list(tmp_path):
     loaded = load_bin(bin_file)
 
     assert loaded == data
+    assert isinstance(loaded, list)
