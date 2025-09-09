@@ -5,7 +5,7 @@ import joblib
 from pathlib import Path
 from box import ConfigBox
 
-from Wine_Quality_Prediction.utils.common import (
+from src.Wine_Quality_Prediction.utils.common import (
     read_yaml,
     create_directories,
     save_json,
@@ -34,8 +34,8 @@ def test_read_yaml_empty_file(tmp_path):
     empty_yaml = tmp_path / "empty.yaml"
     empty_yaml.write_text("")
 
-    # Match exactly the error message your function raises
-    with pytest.raises(ValueError, match="yaml file is empty"):
+    # Match exactly the error message raised in common.py
+    with pytest.raises(ValueError, match="YAML file is empty"):
         read_yaml(empty_yaml)
 
 
@@ -43,7 +43,7 @@ def test_read_yaml_invalid_file(tmp_path):
     bad_yaml = tmp_path / "bad.yaml"
     bad_yaml.write_text("name: wine: invalid")
 
-    # Expecting generic exception for invalid YAML
+    # Any YAML parse error should raise an Exception
     with pytest.raises(Exception):
         read_yaml(bad_yaml)
 
