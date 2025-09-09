@@ -1,6 +1,6 @@
 import os
 import yaml
-from src.datascience import logger
+from src.Wine_Quality_Prediction import logger
 import json
 import joblib
 from ensure import ensure_annotations
