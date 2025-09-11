@@ -53,11 +53,7 @@ def create_directories(path_to_directories: Union[list[Path], Path], verbose: bo
         os.makedirs(path, exist_ok=True)
         if verbose:
             logger.info(f"Created directory at: {path}")
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 94f97bc1769f4ba78d3adafc0745fd480d43100a
 @ensure_annotations
 def save_json(path: Path, data: dict):
     """save json data
