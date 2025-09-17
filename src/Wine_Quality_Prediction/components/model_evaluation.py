@@ -13,6 +13,11 @@ from src.Wine_Quality_Prediction.utils.common import read_yaml, create_directori
 
 
 
+import os
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/akashgaikwad746/MLOps_Wine_Quality_Prediction.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"]="akashgaikwad746"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="8213a7d6d852923d36fdd89244fe83cdd3eb73c7"
+
 class ModelEvaluation:
     def __init__(self, config: ModelEvaluationConfig):
         self.config = config
