@@ -18,12 +18,8 @@ eggs/
 lib/
 lib64/
 logs/
-# Ignore everything in artifacts
 artifacts/*
-
-# But don't ignore .dvc files
 !artifacts/**/*.dvc
-
 parts/
 sdist/
 var/
