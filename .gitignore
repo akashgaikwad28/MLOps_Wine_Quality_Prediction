@@ -11,11 +11,14 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+mlruns/
 downloads/
 eggs/
 .eggs/
 lib/
 lib64/
+logs/
+artifacts/
 parts/
 sdist/
 var/
@@ -75,8 +78,7 @@ docs/_build/
 .pybuilder/
 target/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+
 
 # IPython
 profile_default/

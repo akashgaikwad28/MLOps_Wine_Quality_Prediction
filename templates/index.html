@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction - Acash Tech</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('static/assets/img/form-v9.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .btn-predict {
+            width: 100%;
+            background-color: #007BFF;
+            border: none;
+        }
+        .btn-predict:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Acash Tech</h1>
+    <div class="form-container">
+        <form action="/predict" method="post">
+            <h2>Wine Quality Prediction</h2>
+            
+            <div class="mb-3">
+                <label for="fixed_acidity" class="form-label">Fixed Acidity</label>
+                <input type="text" class="form-control" name="fixed_acidity" id="fixed_acidity" placeholder="Enter fixed acidity" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="volatile_acidity" class="form-label">Volatile Acidity</label>
+                <input type="text" class="form-control" name="volatile_acidity" id="volatile_acidity" placeholder="Enter volatile acidity" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="citric_acid" class="form-label">Citric Acid</label>
+                <input type="text" class="form-control" name="citric_acid" id="citric_acid" placeholder="Enter citric acid" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="residual_sugar" class="form-label">Residual Sugar</label>
+                <input type="text" class="form-control" name="residual_sugar" id="residual_sugar" placeholder="Enter residual sugar" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="chlorides" class="form-label">Chlorides</label>
+                <input type="text" class="form-control" name="chlorides" id="chlorides" placeholder="Enter chlorides" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="free_sulfur_dioxide" class="form-label">Free Sulfur Dioxide</label>
+                <input type="text" class="form-control" name="free_sulfur_dioxide" id="free_sulfur_dioxide" placeholder="Enter free sulfur dioxide" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="total_sulfur_dioxide" class="form-label">Total Sulfur Dioxide</label>
+                <input type="text" class="form-control" name="total_sulfur_dioxide" id="total_sulfur_dioxide" placeholder="Enter total sulfur dioxide" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="density" class="form-label">Density</label>
+                <input type="text" class="form-control" name="density" id="density" placeholder="Enter density" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="pH" class="form-label">pH</label>
+                <input type="text" class="form-control" name="pH" id="pH" placeholder="Enter pH" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="sulphates" class="form-label">Sulphates</label>
+                <input type="text" class="form-control" name="sulphates" id="sulphates" placeholder="Enter sulphates" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="alcohol" class="form-label">Alcohol</label>
+                <input type="text" class="form-control" name="alcohol" id="alcohol" placeholder="Enter alcohol" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-predict">Predict</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Acash Tech
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
